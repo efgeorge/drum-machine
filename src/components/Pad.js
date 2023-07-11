@@ -30,16 +30,18 @@ const Pad = () => {
         'source': 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'        
        }
     ];
-    const handleClick= (audio) => {
-        let audioToPlay = new Audio(audio);
-        audioToPlay.play();
-    }
+    // const handleClick = (audio) => {
+    //     let audioToPlay = new Audio(audio);
+    //     audioToPlay.play();
+    // }
+
     const padsOutput = pads.map(pad => 
-    <button id="pad" onClick={handleClick(pad.source)}>
-        <audio class="clip" id={pad.key} src={pad.source}></audio>
-        {pad.key}
-    </button>
+        <button id="pad" onClick={() => new Audio(pad.source).play()}>
+            <audio class="clip" id={pad.key} src={pad.source}></audio>
+            {pad.key}
+        </button>
     );
+    
 
     return (
         <div id="drum-pad">
