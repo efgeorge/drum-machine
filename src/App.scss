@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	font-family: 'Russo One', cursive;
 	line-height: 1;
 	background: #96ceb4;
 	display: flex;
@@ -53,4 +56,5 @@ table {
 	height: 25rem;
 	width: 40rem;
 	border: 0.8rem solid #ffcc5c;
+	padding-left: 1rem;
 }
