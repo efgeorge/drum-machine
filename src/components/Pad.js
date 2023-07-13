@@ -31,16 +31,23 @@ const Pad = () => {
        }
     ];
 
-    const handleKeyPress = (e, key, source) => {
-        if (e.key === key) {
-            new Audio(source).play();
-        }
-    }
+    // const handleKeyPress = (e) => {
+    //     if (e.key === "Q") {
+    //         new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3').play();
+    //     }
 
+    // }
+
+    // const handleKeyPress = (e, key, source) => {
+    //     if (e.key === key) {
+    //         new Audio(source).play();
+    //     }
+    // }
+    
     const padsOutput = pads.map(pad => 
-        <div id="pad" onClick={() => new Audio(pad.source).play()} onKeyDown={(e) => handleKeyPress(e, pad.key, pad.source)}>
+        <button id="pad" onClick={() => new Audio(pad.source).play()} onKeyDown={() => new Audio(pad.source).play()}>
             {pad.key}
-        </div>
+        </button>
     );
     
 
