@@ -31,8 +31,14 @@ const Pad = () => {
        }
     ];
 
+    const handleKeyPress = (e, key, source) => {
+        if (e.key === key) {
+            new Audio(source).play();
+        }
+    }
+
     const padsOutput = pads.map(pad => 
-        <div id="pad" onClick={() => new Audio(pad.source).play()}>
+        <div id="pad" onClick={() => new Audio(pad.source).play()} onKeyDown={(e) => handleKeyPress(e, pad.key, pad.source)}>
             {pad.key}
         </div>
     );
