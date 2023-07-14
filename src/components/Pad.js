@@ -1,35 +1,8 @@
-import './../styles/Pad.scss'
+import './../styles/Pad.scss';
+import { useEffect, useRef } from 'react';
 
-const Pad = () => {
-    const pads = [
-        {'key': 'Q',
-         'source': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'        
-        }, 
-        {'key': 'W',
-        'source': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'        
-        }, 
-        {'key': 'E',
-         'source': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'        
-        }, 
-        {'key': 'A',
-         'source': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'        
-        }, 
-        {'key': 'S',
-         'source': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'        
-        }, 
-        {'key': 'D',
-         'source': 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'        
-        }, 
-        {'key': 'Z',
-         'source': 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'        
-        }, 
-        {'key': 'X',
-         'source': 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'        
-        }, 
-        {'key': 'C',
-        'source': 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'        
-       }
-    ];
+const Pad = ({ pads }) => {
+    
 
     // const handleKeyPress = (e) => {
     //     if (e.key === "Q") {
@@ -37,17 +10,21 @@ const Pad = () => {
     //     }
 
     // }
-
-    // const handleKeyPress = (e, key, source) => {
-    //     if (e.key === key) {
-    //         new Audio(source).play();
-    //     }
-    // }
     
+    // const handleKeyPress = (e, key,) => {
+    //     console.log(e.key);
+    // }
+
+    // const ref = useRef(null);
+    // useEffect(() => {
+    //     ref.current.focus();
+    // }, []);
+
     const padsOutput = pads.map(pad => 
-        <button id="pad" onClick={() => new Audio(pad.source).play()} onKeyDown={() => new Audio(pad.source).play()}>
+        // ref={ref} onKeyDown={(e) => handleKeyPress(e, pad.key, pad.source)} tabIndex={0}
+        <div id="pad" onClick={() => new Audio(pad.source).play()} >
             {pad.key}
-        </button>
+        </div>
     );
     
 
