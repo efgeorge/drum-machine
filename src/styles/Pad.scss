@@ -24,3 +24,17 @@
     border-radius: 3px;
     box-shadow: 5px 5px 5px #4db2b6;
 }
+
+#pad:hover {
+    background-color: #ff8783
+}
+
+#pad:active {
+    background-color: #ff8783;
+    transform: translateY(2px);
+}
+
+#pad:focus {
+    background-color: #ff8783;
+    transform: translateY(2px);
+}
