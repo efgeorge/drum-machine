@@ -46,8 +46,8 @@ function App() {
   }
 
   const handleKeyPress = (e) => {
-      new Audio(pads[e.key.toUpperCase()])?.play();
-      console.log(pads[e.key.toUpperCase()], "miau");
+      const keyPress = new Audio(pads[e.key.toUpperCase()]);
+      keyPress?.play();
   }
 
   const ref = useRef(null);
