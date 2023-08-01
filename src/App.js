@@ -1,7 +1,7 @@
 import './App.scss';
 import Pad from './components/Pad';
 import Controls from './components/Controls';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 function App() {
   const pads = {
